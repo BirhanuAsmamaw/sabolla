@@ -1,0 +1,54 @@
+
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+
+
+
+import { topfooter } from '../../assets/asset'
+
+
+const Topfooter = () => {
+    return (
+        <section className="relative py-28 text-white text-center overflow-hidden">
+
+            <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{
+                    backgroundImage: `url(${topfooter})`,
+                }}
+            />
+            <div className="absolute inset-0 bg-[#09140F]/80" />
+
+            <div className="relative z-10 container mx-auto px-6 max-w-5xl">
+                <motion.h3
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7 }}
+                    className="text-2xl sm:text-3xl md:text-4xl font-black mb-8 text-white uppercase leading-tight tracking-tighter"
+                >
+                    Ready to Expand into the <br /> <span className="text-[#308667]">Ethiopian Market?</span>
+                </motion.h3>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 }}
+                >
+                    <Link to="/contact">
+                        <motion.button
+                            whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(47, 148, 111, 0.4)' }}
+                            whileTap={{ scale: 0.95 }}
+                            className="inline-block px-12 py-5 text-sm font-black bg-[#F9F2D6] text-[#122C21] rounded-full transition-all duration-300 uppercase tracking-[0.2em] shadow-lg hover:bg-[#308667] hover:text-white"
+                        >
+                            Contact Us
+                        </motion.button>
+                    </Link>
+                </motion.div>
+            </div>
+        </section>
+    )
+}
+
+export default Topfooter
