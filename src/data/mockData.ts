@@ -43,7 +43,7 @@ export const PARTNER_LOGOS = [
 
 // 6. Contact Info
 export const CONTACT_INFO = {
-  address: "Marathon Motors Mall, Megenagna, Addis Ababa, Ethiopia",
+  address: "Marathon Mall, Megenagna, Addis Ababa, Ethiopia",
   email: "contact@sabolla.com",
   phone: "+251911211592 / +251933906088",
 };
